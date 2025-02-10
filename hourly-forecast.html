@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySnap - Hourly Forecast</title>
+    
+    <!-- Leaflet.js Library (CSS and JS) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- TailwindCSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-300 to-teal-400">
+
+    <!-- Weather App Container -->
+    <div class="container bg-white rounded-xl shadow-lg p-8 max-w-sm w-full">
+        
+        <!-- SkySnap Image -->
+        <div class="mb-6 flex justify-center">
+            <img src="image5.png" alt="Sky Snap" class="w-40 h-40 object-contain"> 
+            <img src="AAA.PNG" alt="Sky Snap" class="w-40 h-40 object-contain">
+        </div>
+
+        <!-- Title for the Page -->
+        <h1 class="text-4xl font-semibold text-center mb-6 text-gray-700">Hourly Forecast 🌖</h1>
+
+        <!-- Weather Search Section -->
+        <div class="mb-4">
+            <input type="text" id="city-input" placeholder="Enter City or Country" class="w-full bg-gray-200 text-gray-800 p-3 rounded-full mb-4" />
+            <button id="get-hourly-btn" class="w-full bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 active:bg-blue-700">Hourly Forecast 🕒</button>
+        </div>
+
+        <!-- Reset Button -->
+        <button id="reset-btn" class="w-full bg-gray-500 text-white p-3 rounded-full hover:bg-gray-600 active:bg-gray-700 mt-3">Reset ♻️</button>
+
+        <!-- Back to Home Button -->
+        <button id="back-home-btn" class="w-full bg-green-500 text-white p-3 rounded-full hover:bg-green-600 active:bg-green-700 mt-3">Back to Home 🏠</button>
+
+        <!-- Hourly Forecast Display Section -->
+        <div id="hourly-forecast-info" class="mt-4 hidden text-center">
+            <h3 id="location-name" class="text-xl font-semibold text-gray-700"></h3>
+            <div id="hourly-forecast" class="grid grid-cols-3 gap-4 mt-4"></div>
+        </div>
+    </div>
+
+    <script src="hourly-forecast.js"></script>
+</body>
+</html>

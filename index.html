@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Snap Weather</title>
+    
+    <!-- Leaflet.js Library (CSS and JS) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- TailwindCSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- OpenReplay Tracking Code for my first project -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-b from-blue-300 to-teal-400">
+
+    <!-- Weather App Container -->
+    <div class="container bg-white rounded-xl shadow-lg p-8 max-w-sm w-full">
+        
+        <!-- SkySnap Image -->
+        <div class="mb-6 flex justify-center">
+            <img src="hi.png" alt="Sky Snap" class="w-40 h-40 object-contain"> 
+            <img src="AAA.PNG" alt="Sky Snap" class="w-40 h-40 object-contain">
+        </div>
+   
+        <!-- Title for the Page -->
+        <h1 class="text-4xl font-semibold text-center mb-6 text-gray-700">SkySnap 🌗</h1>
+
+        <!-- Weather Search Section -->
+        <div class="mb-6">
+            <a href="get-weather.html" id="get-weather" class="w-full bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 active:bg-blue-700 block text-center">Get Weather 🛰️</a>
+        </div>
+
+        <!-- Weather Data Display -->
+        <div id="weather-data" class="hidden mt-6 text-center">
+            <h2 id="city-name" class="text-2xl font-semibold"></h2>
+            <div class="flex justify-center items-center mb-4">
+                <img id="weather-icon" class="w-12 h-12 mr-4" alt="Weather Icon">
+                <p id="weather-condition" class="text-xl"></p>
+            </div>
+            <p id="temperature" class="text-xl"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+        </div>
+
+        <!-- Additional Weather Details -->
+        <div id="extra-details" class="mt-6 text-center hidden">
+            <h3 class="text-2xl font-semibold mb-4">Additional Weather Details</h3>
+            <p id="pressure">Pressure: </p>
+            <p id="visibility">Visibility: </p>
+            <p id="feels-like">Feels Like: </p>
+        </div>
+
+        <!-- Extra Button for More Details -->
+        <div id="extra-buttons" class="mt-6 flex justify-center hidden">
+            <button id="details-button" class="w-full bg-yellow-400 text-white p-3 rounded-full hover:bg-yellow-500 active:bg-yellow-600">More Details</button>
+        </div>
+
+        <!-- Hourly Forecast Button (Link to the Hourly Forecast Page) -->
+        <a href="hourly-forecast.html" id="hourly-forecast" class="w-full bg-indigo-500 text-white p-3 rounded-full hover:bg-blue-700 active:bg-blue-800 mt-4 block text-center">Hourly Forecast 🕒</a>
+
+        <a href="weather-map.html" id="weather-map" hover:green-700 class="w-full bg-blue-500 text-white p-3 rounded-full hover:bg-blue-700 active:bg-blue-800 mt-4 block text-center">Weather Map 🗺</a>
+
+        <!-- New Buttons for Additional Pages -->
+        <a href="weather-recommendations.html" class="w-full bg-purple-500 text-white p-3 rounded-full hover:bg-purple-600 active:bg-purple-700 mt-4 block text-center">Weather Recommendations 🌖 </a>
+        <a href="weather-chatbot.html" class="w-full bg-green-500 text-white p-3 rounded-full hover:bg-blue-500 active:bg-pink-700 mt-4 block text-center">Weather Chatbot 🗣️ </a>
+        <a href="weather-statistics.html" class="w-full bg-indigo-500 text-white p-3 rounded-full hover:bg-indigo-600 active:bg-indigo-700 mt-4 block text-center">Weather Statistics 🎢 </a>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
